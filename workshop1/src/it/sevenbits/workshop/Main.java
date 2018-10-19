@@ -5,27 +5,19 @@ import it.sevenbits.workshop.Matrix.Matrix;
 
 public class Main {
     public static void main(String[] args) {
-        int rowsLen = 3;
-        int colsLen = 4;
-        if (args.length == 2){
-            rowsLen =  Integer.parseInt(args[0]);
-            colsLen = Integer.parseInt(args[1]);
-        }
-        Matrix matrix = new Matrix(rowsLen,colsLen);
-        DoubleEndedQueue queue = new DoubleEndedQueue(100);
-        System.out.println(matrix.toString());
-        matrix.Inverse();
-        System.out.println(matrix.toString());
-
+        DoubleEndedQueue queue = new DoubleEndedQueue();
+        Matrix firstMatrix = new Matrix(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+        Matrix secondMatrix = new Matrix(3, 3);
+        Matrix thirdMatrix = new Matrix(4, 4);
+        queue.addLast(secondMatrix);
+        queue.addFirst(firstMatrix);
+        queue.addLast(thirdMatrix);
+        queue.addLast(secondMatrix);
+        queue.addLast(firstMatrix);
         System.out.println(queue.toString());
-        queue.AddFirst(DoubleEndedQueue.RANDOM_NODE);
-        System.out.println(queue.toString());
-        queue.AddLast(DoubleEndedQueue.RANDOM_NODE);
-        System.out.println(queue.toString());
-        queue.AddFirst(DoubleEndedQueue.RANDOM_NODE);
-        queue.AddLast(DoubleEndedQueue.RANDOM_NODE);
-        System.out.println(queue.GetFirst());
-        System.out.println(queue.GetLast());
-        System.out.println(queue.toString());
+        queue.addFirst(secondMatrix);
+        queue.addLast(thirdMatrix);
+        System.out.println(queue.getFirst());
+        System.out.println(queue.getLast());
     }
 }
