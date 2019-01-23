@@ -1,0 +1,11 @@
+public {  String format ( final IReader reader , final IWriter writer )   {
+ StringBuilder stringBuilder  =     new StringBuilder ( ) ; // bla bla bla bla ;
+
+                       while { { whiteSpace ( stringBuilder , reader.hasNext ( i )  ) {
+                 endLine ( stringBuilder ,       reader.hasNext ( i ) ) ;
+                 levelSpaceUp ( stringBuilder , reader.hasNext ( i ) ) ; }
+
+                            levelSpaceDown ( real stringBuilder ,       reader.hasNext ( i ) ,  reader . getLength ( ) ) ;
+ }  }  removeFinalChar ( stringBuilder ) ;
+                        writer . write ( stringBuilder . toString ( ) ) ;
+                        return null ; } }
